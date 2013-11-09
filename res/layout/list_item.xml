@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bgcolor"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin" >
+
+<LinearLayout
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_bgcolor"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtPostedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:linksClickable="true"
+            android:autoLink="web" 
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <org.thewheatfield.etanownative.AspectRatioImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostedDate"
+            android:contentDescription="@string/thumbnail_image_text"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|right"
+            android:padding="@dimen/status_padding"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+    
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false"
+        android:contentDescription="@string/thumbnail_image_text"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text" />
+</LinearLayout>
+</LinearLayout>
